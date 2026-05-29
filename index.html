@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My script</title>
+    <script type="text/javascript">
+
+        perfectNumber = 12;
+
+        function checkApples(numApples)
+        {
+            if (numApples == perfectNumber)
+            {
+                alert("Kyllä, söit täydellisen määrän omenoita!");
+            }
+            else if (numApples > perfectNumber)
+            {
+                alert("Söit aivan liikaa omenoita.");
+            }
+            else if (numApples < perfectNumber)
+            {
+                alert("Et syönyt tarpeeksi omenoita.");
+            }
+            else
+            {
+                alert("En ymmärrä, mistä puhut.");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h3>Kuinka monta omenaa söit?</h3>
+    <form method="POST" name="applesForm"
+    onSubmit="checkApples(document.applesForm.numApples.value);">
+        <input type="text" name="numApples" id="numApples" />
+        <input type="submit" name="Submit" value="Lähetä" />
+    </form>
+</body>
+</html>
+
